@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 import { FaCalendarAlt, FaChartLine, FaFire, FaMedal } from 'react-icons/fa';
 import { GiMeditation } from 'react-icons/gi';
 import { useUserStats } from '../components/usercontexts/UserStatsContext';
@@ -152,7 +153,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-indigo-50 min-h-screen">
+    <div className="bg-gradient-to-br from-green-100 to-indigo-50 min-h-screen">
       {/* Header with subtle animation */}
       <div 
         className={`w-full bg-white py-6 px-4 sm:px-6 lg:px-8 shadow-sm mb-6 transition-all duration-700 ease-out transform ${
@@ -304,3 +305,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

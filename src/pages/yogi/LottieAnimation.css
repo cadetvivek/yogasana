@@ -2,6 +2,8 @@ html {
 	overflow: hidden;
 	touch-action: none;
 	content-zooming: none;
+	
+
 }
 body {
 	position: absolute;
@@ -21,6 +23,7 @@ canvas {
 	z-index: 1;
 	top: 0;
 	left: 0;
+	
 }
 .draggable {
 		cursor: pointer;

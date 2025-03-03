@@ -4,22 +4,24 @@ import { GiMeditation } from 'react-icons/gi'
 import { useAuth } from '../context/AuthContext'
 
 const Home = () => {
-  const { currentUser } = useAuth()
+  const { currentUser } = useAuth(null)
+  // console.log("Current User:", currentUser);
 
+   
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-52">
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Transform Your Yoga Practice, Together</h1>
             <p className="text-xl mb-8">Track your progress, join challenges, and connect with a community of yoga enthusiasts.</p>
             {currentUser ? (
-              <Link to="/dashboard" className="btn btn-secondary text-lg px-8 py-3">Go to Dashboard</Link>
+              <Link to="/dashboard" className="inline-block btn btn-secondary text-lg px-8 py-3">Go to Dashboard</Link>
             ) : (
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/register" className="btn btn-secondary text-lg px-8 py-3">Get Started</Link>
-                <Link to="/login" className="btn bg-white text-primary hover:bg-gray-100 text-lg px-8 py-3">Log In</Link>
+                <Link to="/register" className="inline-block btn btn-secondary text-lg px-8 py-3">Get Started</Link>
+                <Link to="/login" className="inline-block btn bg-white text-primary hover:bg-gray-100 text-lg px-8 py-3">Log In</Link>
               </div>
             )}
           </div>
